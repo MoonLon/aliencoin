@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Aliencoin
+Comment=Aliencoin P2P Cryptocurrency
+Comment[fr]=Aliencoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Aliencoin, eşten eşe kriptografik sanal para birimi
+Exec=aliencoin-qt %u
+Terminal=false
+Type=Application
+Icon=aliencoin128
+MimeType=x-scheme-handler/aliencoin;
+Categories=Office;Finance;

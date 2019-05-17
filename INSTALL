@@ -1,0 +1,5 @@
+Building Aliencoin
+
+See doc/build-*.md for instructions on building aliencoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of Aliencoin.

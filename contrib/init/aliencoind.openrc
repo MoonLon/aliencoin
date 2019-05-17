@@ -1,0 +1,86 @@
+#!/sbin/runscript
+
+# backward compatibility for existing gentoo layout 
+#
+if [ -d "/var/lib/aliencoin/.aliencoin" ]; then
+	ALIENCOIND_DEFAULT_DATADIR="/var/lib/aliencoin/.aliencoin"
+else
+	ALIENCOIND_DEFAULT_DATADIR="/var/lib/aliencoind"
+fi
+
+ALIENCOIND_CONFIGFILE=${ALIENCOIND_CONFIGFILE:-/etc/aliencoin/aliencoin.conf}
+ALIENCOIND_PIDDIR=${ALIENCOIND_PIDDIR:-/var/run/aliencoind}
+ALIENCOIND_PIDFILE=${ALIENCOIND_PIDFILE:-${ALIENCOIND_PIDDIR}/aliencoind.pid}
+ALIENCOIND_DATADIR=${ALIENCOIND_DATADIR:-${ALIENCOIND_DEFAULT_DATADIR}}
+ALIENCOIND_USER=${ALIENCOIND_USER:-aliencoin}
+ALIENCOIND_GROUP=${ALIENCOIND_GROUP:-aliencoin}
+ALIENCOIND_BIN=${ALIENCOIND_BIN:-/usr/bin/aliencoind}
+
+name="Aliencoin Core Daemon"
+description="Aliencoin crypto-currency p2p network daemon"
+
+command="/usr/bin/aliencoind"
+command_args="-pid=\"${ALIENCOIND_PIDFILE}\" \
+		-conf=\"${ALIENCOIND_CONFIGFILE}\" \
+		-datadir=\"${ALIENCOIND_DATADIR}\" \
+		-daemon \
+		${ALIENCOIND_OPTS}"
+
+required_files="${ALIENCOIND_CONFIGFILE}"
+start_stop_daemon_args="-u ${ALIENCOIND_USER} \
+			-N ${ALIENCOIND_NICE:-0} -w 2000"
+pidfile="${ALIENCOIND_PIDFILE}"
+retry=60
+
+depend() {
+	need localmount net
+}
+
+# verify
+# 1) that the datadir exists and is writable (or create it)
+# 2) that a directory for the pid exists and is writable
+# 3) ownership and permissions on the config file
+start_pre() {
+	checkpath \
+	-d \
+	--mode 0750 \
+	--owner "${ALIENCOIND_USER}:${ALIENCOIND_GROUP}" \
+	"${ALIENCOIND_DATADIR}"
+
+	checkpath \
+	-d \
+	--mode 0755 \
+	--owner "${ALIENCOIND_USER}:${ALIENCOIND_GROUP}" \
+	"${ALIENCOIND_PIDDIR}"
+
+	checkpath -f \
+	-o ${ALIENCOIND_USER}:${ALIENCOIND_GROUP} \
+	-m 0660 \
+	${ALIENCOIND_CONFIGFILE}
+
+	checkconfig || return 1
+}
+
+checkconfig()
+{
+	if ! grep -qs '^rpcpassword=' "${ALIENCOIND_CONFIGFILE}" ; then
+		eerror ""
+		eerror "ERROR: You must set a secure rpcpassword to run aliencoind."
+		eerror "The setting must appear in ${ALIENCOIND_CONFIGFILE}"
+		eerror ""
+		eerror "This password is security critical to securing wallets "
+		eerror "and must not be the same as the rpcuser setting."
+		eerror "You can generate a suitable random password using the following"
+		eerror "command from the shell:"
+		eerror ""
+		eerror "bash -c 'tr -dc a-zA-Z0-9 < /dev/urandom | head -c32 && echo'"
+		eerror ""
+		eerror "It is also recommended that you also set alertnotify so you are "
+		eerror "notified of problems:"
+		eerror ""
+		eerror "ie: alertnotify=echo %%s | mail -s \"Aliencoin Alert\"" \
+			"admin@foo.com"
+		eerror ""
+		return 1
+	fi
+}

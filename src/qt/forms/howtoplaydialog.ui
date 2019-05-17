@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HowToPlayDialog</class>
+ <widget class="QWidget" name="HowToPlayDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>408</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">border-image: url(:/images/attrbk);</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>411</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <widget class="QWidget" name="widget_2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>102</y>
+         <width>384</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/labbk);</string>
+       </property>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>13</x>
+          <y>0</y>
+          <width>350</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url();
+font: 16px &quot;Arial&quot;;
+color: rgb(132, 146, 166);</string>
+        </property>
+        <property name="text">
+         <string>2.如何获取宠物</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>32</x>
+         <y>235</y>
+         <width>352</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url();
+color: rgb(187, 187, 187);
+font: 12px &quot;Arial&quot;;</string>
+       </property>
+       <property name="text">
+        <string>转账前请再三确认数目准确无误，出现误差无法生成宠物，且代币无法退回。</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>32</x>
+         <y>132</y>
+         <width>352</width>
+         <height>48</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url();
+color: rgb(187, 187, 187);
+font: 12px &quot;Arial&quot;;</string>
+       </property>
+       <property name="text">
+        <string>首次转账固定数代币，即可获得对应代宠物：
+10亿alc-隐藏代，1亿alc-0代，1000万alc-1代，100万alc-2代，10万alc-3代</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>50</y>
+         <width>352</width>
+         <height>48</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url();
+color: rgb(187, 187, 187);
+font: 12px &quot;Arial&quot;;</string>
+       </property>
+       <property name="text">
+        <string>宠物数值养成系统建立在Aliencoin Block chain，根据账本输出值来决定宠物代数和属性，没有人能控制玩家的宠物，请保管好钱包密钥，一旦丢失无法找回</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btngetpet">
+       <property name="geometry">
+        <rect>
+         <x>126</x>
+         <y>184</y>
+         <width>161</width>
+         <height>47</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget_3" native="true">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>271</y>
+         <width>384</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/labbk);</string>
+       </property>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>13</x>
+          <y>0</y>
+          <width>350</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url();
+font: 16px &quot;Arial&quot;;
+color: rgb(132, 146, 166);</string>
+        </property>
+        <property name="text">
+         <string>3.获取宠物注意事项</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="widget_4" native="true">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>20</y>
+         <width>384</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/labbk);</string>
+       </property>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>13</x>
+          <y>0</y>
+          <width>350</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url();
+font: 16px &quot;Arial&quot;;
+color: rgb(132, 146, 166);</string>
+        </property>
+        <property name="text">
+         <string>1.玩法介绍</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>32</x>
+         <y>300</y>
+         <width>352</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url();
+color: rgb(187, 187, 187);
+font: 12px &quot;Arial&quot;;</string>
+       </property>
+       <property name="text">
+        <string>仅首次转账有效,获得宠物后无法叠加获得和升级代数,如玩家首次转账1000万alc获得1代宠物,则同一个钱包密钥,再次转账1亿alc则视为无效,代币无法退回.
+正确操作流程：
+1，首次转账固定数额代币获得对应代数宠物
+2，获得宠物后，持续喂养升级数值，不喂养仅为不升级，宠物不会消失
+3，如需更换宠物，可选择重新生成新的钱包密钥文件</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

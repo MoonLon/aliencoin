@@ -1,0 +1,27 @@
+# /etc/conf.d/aliencoind: config file for /etc/init.d/aliencoind
+
+# Config file location
+#ALIENCOIND_CONFIGFILE="/etc/aliencoin/aliencoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $ALIENCOIND_USER)
+#ALIENCOIND_PIDDIR="/var/run/aliencoind"
+
+# What filename to give the pidfile
+#ALIENCOIND_PIDFILE="${ALIENCOIND_PIDDIR}/aliencoind.pid"
+
+# Where to write aliencoind data (be mindful that the blockchain is large)
+#ALIENCOIND_DATADIR="/var/lib/aliencoind"
+
+# User and group to own aliencoind process
+#ALIENCOIND_USER="aliencoin"
+#ALIENCOIND_GROUP="aliencoin"
+
+# Path to aliencoind executable
+#ALIENCOIND_BIN="/usr/bin/aliencoind"
+
+# Nice value to run aliencoind under
+#ALIENCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+ALIENCOIND_OPTS="-disablewallet"
+

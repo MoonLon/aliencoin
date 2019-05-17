@@ -1,0 +1,27 @@
+CPPFLAGS="-I/d/deps521/boost_1_55_0 \
+-I/d/deps521/db-4.8.30.NC/build_unix \
+-I/d/deps521/openssl-1.0.1g/include \
+-I/d/deps521 \
+-I/d/deps521/protobuf-2.6.1/src \
+-I/d/deps521/libpng-1.6.10 \
+-I/d/deps521/qrencode-3.4.3" \
+LDFLAGS="-L/d/deps521/boost_1_55_0/stage/lib \
+-L/d/deps521/db-4.8.30.NC/build_unix \
+-L/d/deps521/openssl-1.0.1g \
+-L/d/deps521/miniupnpc \
+-L/d/deps521/protobuf-2.6.1/src/.libs \
+-L/d/deps521/libpng-1.6.10/.libs \
+-L/d/deps521/qrencode-3.4.3/.libs" \
+./configure \
+--disable-upnp-default \
+--disable-tests \
+--with-qt-incdir=/d/deps521/qtbase-opensource-src-5.2.1/include \
+--with-qt-libdir=/d/deps521/qtbase-opensource-src-5.2.1/lib \
+--with-qt-bindir=/d/deps521/qtbase-opensource-src-5.2.1/bin \
+--with-qt-plugindir=/d/deps521/qtbase-opensource-src-5.2.1/plugins \
+--with-boost-system=mgw73-mt-s-1_55 \
+--with-boost-filesystem=mgw73-mt-s-1_55 \
+--with-boost-program-options=mgw73-mt-s-1_55 \
+--with-boost-thread=mgw73-mt-s-1_55 \
+--with-boost-chrono=mgw73-mt-s-1_55 \
+--with-protoc-bindir=/d/deps521/protobuf-2.6.1/src 

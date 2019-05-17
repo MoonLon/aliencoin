@@ -1,0 +1,6 @@
+usr/local/bin/aliencoin-qt usr/bin
+share/pixmaps/aliencoin32.xpm usr/share/pixmaps
+share/pixmaps/aliencoin16.xpm usr/share/pixmaps
+share/pixmaps/aliencoin128.png usr/share/pixmaps
+debian/aliencoin-qt.desktop usr/share/applications
+debian/aliencoin-qt.protocol usr/share/kde4/services/

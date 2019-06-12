@@ -178,6 +178,8 @@ private slots:
     void gotoOverviewPage();
     /** Switch to pet research ins */
 	void gotoPetResearchInsPage();
+	/** Switch to pet planet page */
+	void gotoPetPlanetPage();
     /** Switch to history (transactions) page */
     void gotoHistoryPage();
     /** Switch to receive coins page */

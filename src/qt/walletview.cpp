@@ -30,6 +30,7 @@
 #include <QProgressDialog>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include "petplanetdlg.h"
 
 WalletView::WalletView(QWidget *parent):
     QStackedWidget(parent),
@@ -60,11 +61,13 @@ WalletView::WalletView(QWidget *parent):
 	// add new view here pet research institute;
 	petInstiView = new PetResearchInstitute();
 
+	petPlanetView = new PetPlanetDlg();
     addWidget(overviewPage);
     addWidget(transactionsPage);
     addWidget(receiveCoinsPage);
     addWidget(sendCoinsPage);
 	addWidget(petInstiView);
+	addWidget(petPlanetView);
 
     // Clicking on a transaction on the overview pre-selects the transaction on the transaction history page
     connect(overviewPage, SIGNAL(transactionClicked(QModelIndex)), transactionView, SLOT(focusTransaction(QModelIndex)));
@@ -95,6 +98,9 @@ void WalletView::setAliencoinGUI(AliencoinGUI *gui)
 		connect(petInstiView->petFeedWidget, SIGNAL(feedClicked()), gui, SLOT(gotoSendCoinsPage()));
 
         connect(petInstiView->petHowtoplay, SIGNAL(getpetClicked(QString)), gui, SLOT(gotoSendCoinsPage(QString)));
+		/** new add for insert petplanet */
+		connect(petPlanetView, SIGNAL(updatePlanet(QString)), gui, SLOT(gotoSendCoinsPage(QString)));
+		connect(petPlanetView, SIGNAL(getPlanet(QString)), gui, SLOT(gotoSendCoinsPage(QString)));
         // Receive and report messages
         connect(this, SIGNAL(message(QString,QString,unsigned int)), gui, SLOT(message(QString,QString,unsigned int)));
 
@@ -122,6 +128,8 @@ void WalletView::setWalletModel(WalletModel *walletModel)
     transactionView->setModel(walletModel);
     overviewPage->setWalletModel(walletModel);
 	petInstiView->setWalletModel(walletModel);
+	/** add pet planet view set wallet model */
+	petPlanetView->setWalletModel(walletModel);
     receiveCoinsPage->setModel(walletModel);
     sendCoinsPage->setModel(walletModel);
 
@@ -137,13 +145,24 @@ void WalletView::setWalletModel(WalletModel *walletModel)
         // Balloon pop-up for new transaction
         connect(walletModel->getTransactionTableModel(), SIGNAL(rowsInserted(QModelIndex,int,int)),
                 this, SLOT(processNewTransaction(QModelIndex,int,int)));
-
+		// new add for fixed juejin value sync ;
+		connect(walletModel, SIGNAL(transstatuschecktimer()), this, SLOT(setBalance()));
         // Ask for passphrase if needed
         connect(walletModel, SIGNAL(requireUnlock()), this, SLOT(unlockWallet()));
 
         // Show progress dialog
         connect(walletModel, SIGNAL(showProgress(QString,int)), this, SLOT(showProgress(QString,int)));
     }
+}
+void WalletView::setBalance()
+{
+	if(petInstiView){
+		petInstiView->setBalance(0,0,0,0,0,0);
+	}
+
+	if(petPlanetView){
+		petPlanetView->updateBalance(0,0,0,0,0,0);
+	}
 }
 
 void WalletView::processNewTransaction(const QModelIndex& parent, int start, int /*end*/)
@@ -182,6 +201,11 @@ void WalletView::gotoPetResearchInst()
 {
 	setCurrentWidget(petInstiView);
 }
+void WalletView::gotoPetPlanetPage()
+{
+	setCurrentWidget(petPlanetView);
+}
+
 void WalletView::gotoSendCoinsPage(QString addr)
 {
     setCurrentWidget(sendCoinsPage);

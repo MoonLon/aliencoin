@@ -223,6 +223,7 @@ private:
     void subscribeToCoreSignals();
     void unsubscribeFromCoreSignals();
     void checkBalanceChanged();
+	void updateTransactionStatus();
 
 signals:
     // Signal that balance in wallet changed
@@ -248,7 +249,8 @@ signals:
 
     // Watch-only address added
     void notifyWatchonlyChanged(bool fHaveWatchonly);
-
+	void transstatuschecktimer();
+	
 public slots:
     /* Wallet status might have changed */
     void updateStatus();

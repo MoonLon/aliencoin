@@ -17,6 +17,8 @@ class ReceiveCoinsDialog;
 class SendCoinsDialog;
 class SendCoinsRecipient;
 class TransactionView;
+class PetPlanetDlg;
+
 
 class WalletModel;
 
@@ -69,11 +71,14 @@ private:
 
     // new add for pet research ;
     PetResearchInstitute *petInstiView;
+	PetPlanetDlg *petPlanetView;
 public slots:
     /** Switch to overview (home) page */
     void gotoOverviewPage();
 	/** Switch to Pet Research Institute */
 	void gotoPetResearchInst();
+	/** Switch to Pet Planet Page */
+	void gotoPetPlanetPage();
     /** Switch to history (transactions) page */
     void gotoHistoryPage();
     /** Switch to receive coins page */
@@ -111,6 +116,8 @@ public slots:
     /** Show progress dialog e.g. for rescan */
     void showProgress(const QString &title, int nProgress);
 
+	// new add for fixed juejin value sync
+	void setBalance();
 signals:
     /** Signal that we want to show the main window */
     void showNormalIfMinimized();

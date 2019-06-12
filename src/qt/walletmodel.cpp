@@ -129,11 +129,17 @@ void WalletModel::pollBalanceChanged()
         cachedNumBlocks = chainActive.Height();
 
         checkBalanceChanged();
+		// add new one to check status of trans;
+		updateTransactionStatus();
         if(transactionTableModel)
             transactionTableModel->updateConfirmations();
     }
 }
+void WalletModel::updateTransactionStatus()
+{
+	emit transstatuschecktimer();
 
+}
 void WalletModel::checkBalanceChanged()
 {
     CAmount newBalance = getBalance();

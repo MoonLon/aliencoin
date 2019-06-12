@@ -1088,6 +1088,7 @@ public:
     int sendTime;
     CAmount sendAmount;
     std::string sendTxid;
+	int 	confirmcount;
 };
 
 #endif // ALIENCOIN_WALLET_H

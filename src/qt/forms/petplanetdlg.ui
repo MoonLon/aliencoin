@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PetPlanetDlg</class>
+ <widget class="QWidget" name="PetPlanetDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>863</width>
+    <height>579</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>780</width>
+         <height>520</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/plantbk);
+background-color: rgb(3, 6, 24);</string>
+       </property>
+       <widget class="QPushButton" name="btnupdate">
+        <property name="geometry">
+         <rect>
+          <x>114</x>
+          <y>79</y>
+          <width>166</width>
+          <height>56</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/images/planetupdate);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnbuyplanet">
+        <property name="geometry">
+         <rect>
+          <x>501</x>
+          <y>79</y>
+          <width>166</width>
+          <height>56</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/images/buyplanet);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>8</x>
+          <y>18</y>
+          <width>264</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/images/plantwm);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lablvlimage">
+        <property name="geometry">
+         <rect>
+          <x>144</x>
+          <y>146</y>
+          <width>104</width>
+          <height>120</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url();
+background-image: url(:/images/planetlvl0);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QWidget" name="widget_2" native="true">
+        <property name="geometry">
+         <rect>
+          <x>41</x>
+          <y>319</y>
+          <width>315</width>
+          <height>96</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/images/planettxtbk);
+</string>
+        </property>
+        <widget class="QLabel" name="label_14">
+         <property name="geometry">
+          <rect>
+           <x>31</x>
+           <y>22</y>
+           <width>100</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image: url();
+font: 17px &quot;Arial&quot;;
+color: rgb(132, 175, 255);
+background-color: rgb(19, 28, 45);</string>
+         </property>
+         <property name="text">
+          <string>掘金值加成</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_15">
+         <property name="geometry">
+          <rect>
+           <x>31</x>
+           <y>58</y>
+           <width>100</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image: url();
+font: 17px &quot;Arial&quot;;
+color: rgb(132, 175, 255);
+background-color: rgb(19, 28, 45);</string>
+         </property>
+         <property name="text">
+          <string>综合掘金值</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labseedbonus">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>22</y>
+           <width>60</width>
+           <height>19</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image: url();
+font: 17px &quot;Arial&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(19, 28, 45);</string>
+         </property>
+         <property name="text">
+          <string>16%</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labseedvalue">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>58</y>
+           <width>60</width>
+           <height>19</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image: url();
+font: 13px &quot;Arial&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(19, 28, 45);</string>
+         </property>
+         <property name="text">
+          <string>512</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>397</x>
+          <y>18</y>
+          <width>265</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/images/labplanet);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>405</x>
+          <y>137</y>
+          <width>129</width>
+          <height>119</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/images/standplanet);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>526</x>
+          <y>137</y>
+          <width>129</width>
+          <height>119</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/images/supperplanet);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>647</x>
+          <y>133</y>
+          <width>122</width>
+          <height>132</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/images/topplanet);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QWidget" name="widget_3" native="true">
+        <property name="geometry">
+         <rect>
+          <x>427</x>
+          <y>319</y>
+          <width>315</width>
+          <height>96</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/images/planettxtbk);</string>
+        </property>
+        <widget class="QLabel" name="label_18">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>10</y>
+           <width>45</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image: url();
+font: 17px &quot;Arial&quot;;
+color: rgb(132, 175, 255);
+background-color: rgb(19, 28, 45);</string>
+         </property>
+         <property name="text">
+          <string>资源</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_19">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>39</y>
+           <width>45</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image: url();
+font: 17px &quot;Arial&quot;;
+color: rgb(132, 175, 255);
+background-color: rgb(19, 28, 45);</string>
+         </property>
+         <property name="text">
+          <string>掘金</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_20">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>68</y>
+           <width>45</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image: url();
+font: 17px &quot;Arial&quot;;
+color: rgb(132, 175, 255);
+background-color: rgb(19, 28, 45);</string>
+         </property>
+         <property name="text">
+          <string>分红</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labtotalRes">
+         <property name="geometry">
+          <rect>
+           <x>75</x>
+           <y>10</y>
+           <width>200</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image: url();
+font: 17px &quot;Arial&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(19, 28, 45);</string>
+         </property>
+         <property name="text">
+          <string>16%</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labjuejin">
+         <property name="geometry">
+          <rect>
+           <x>75</x>
+           <y>39</y>
+           <width>200</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image: url();
+font: 17px &quot;Arial&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(19, 28, 45);</string>
+         </property>
+         <property name="text">
+          <string>16%</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labfenhong">
+         <property name="geometry">
+          <rect>
+           <x>75</x>
+           <y>68</y>
+           <width>200</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image: url();
+font: 17px &quot;Arial&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(19, 28, 45);</string>
+         </property>
+         <property name="text">
+          <string>16%</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="labwmlvl">
+        <property name="geometry">
+         <rect>
+          <x>136</x>
+          <y>280</y>
+          <width>123</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url();
+font: 30px &quot;Arial&quot;;
+color: rgb(136, 226, 118);</string>
+        </property>
+        <property name="text">
+         <string>16</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labstandNum">
+        <property name="geometry">
+         <rect>
+          <x>414</x>
+          <y>266</y>
+          <width>110</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url();
+font: 18px &quot;Arial&quot;;
+color: rgb(136, 226, 118);</string>
+        </property>
+        <property name="text">
+         <string>标准矿星(0)</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labsupperNum">
+        <property name="geometry">
+         <rect>
+          <x>535</x>
+          <y>266</y>
+          <width>110</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url();
+color: rgb(47, 115, 255);
+font: 18px &quot;Arial&quot;;</string>
+        </property>
+        <property name="text">
+         <string>超级矿星(0)</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labtopNum">
+        <property name="geometry">
+         <rect>
+          <x>653</x>
+          <y>266</y>
+          <width>111</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url();
+color: rgb(255, 204, 0);
+font: 18px &quot;Arial&quot;;</string>
+        </property>
+        <property name="text">
+         <string>顶级矿星(0)</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>414</x>
+          <y>293</y>
+          <width>110</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url();
+font: 12px &quot;Arial&quot;;
+color: rgb(141, 147, 160);</string>
+        </property>
+        <property name="text">
+         <string>100万</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_12">
+        <property name="geometry">
+         <rect>
+          <x>535</x>
+          <y>293</y>
+          <width>110</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url();
+font: 12px &quot;Arial&quot;;
+color: rgb(141, 147, 160);</string>
+        </property>
+        <property name="text">
+         <string>1000万</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>653</x>
+          <y>293</y>
+          <width>111</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url();
+font: 12px &quot;Arial&quot;;
+color: rgb(141, 147, 160);</string>
+        </property>
+        <property name="text">
+         <string>1亿</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_24">
+        <property name="geometry">
+         <rect>
+          <x>16</x>
+          <y>433</y>
+          <width>54</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url();
+font: 17px &quot;Arial&quot;;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>玩法：</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_25">
+        <property name="geometry">
+         <rect>
+          <x>411</x>
+          <y>433</y>
+          <width>54</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url();
+font: 17px &quot;Arial&quot;;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>玩法：</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_26">
+        <property name="geometry">
+         <rect>
+          <x>23</x>
+          <y>459</y>
+          <width>347</width>
+          <height>47</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url();
+font: 12px &quot;Arial&quot;;
+color:rgb(177, 177, 177);</string>
+        </property>
+        <property name="text">
+         <string>升级星级20000/次，升级不限次数，转账ID碰撞，前五位字符内含三位字母和两位数字为碰撞成功，成功升星，不成功则升星失败。</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_27">
+        <property name="geometry">
+         <rect>
+          <x>411</x>
+          <y>459</y>
+          <width>347</width>
+          <height>47</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url();
+font: 12px &quot;Arial&quot;;
+color:rgb(177, 177, 177);</string>
+        </property>
+        <property name="text">
+         <string>请确认购买时数量为整数，否则视为购买失败，代币无法退还，每个密钥最多拥有10个星矿，超过视为无效。</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

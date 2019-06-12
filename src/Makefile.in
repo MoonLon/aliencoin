@@ -144,6 +144,7 @@ TESTS = $(am__EXEEXT_6) $(am__EXEEXT_5)
 @ENABLE_QT_TRUE@@ENABLE_WALLET_TRUE@  qt/openuridialog.cpp \
 @ENABLE_QT_TRUE@@ENABLE_WALLET_TRUE@  qt/overviewpage.cpp \
 @ENABLE_QT_TRUE@@ENABLE_WALLET_TRUE@  qt/petresearchinstitute.cpp \
+@ENABLE_QT_TRUE@@ENABLE_WALLET_TRUE@  qt/petplanetdlg.cpp \
 @ENABLE_QT_TRUE@@ENABLE_WALLET_TRUE@  qt/petfeeddialog.cpp \
 @ENABLE_QT_TRUE@@ENABLE_WALLET_TRUE@  qt/howtoplaydialog.cpp \
 @ENABLE_QT_TRUE@@ENABLE_WALLET_TRUE@  qt/combatpowerdialog.cpp \
@@ -362,16 +363,16 @@ am__qt_libaliencoinqt_a_SOURCES_DIST =  \
 	qt/coincontroldialog.cpp qt/coincontroltreewidget.cpp \
 	qt/editaddressdialog.cpp qt/openuridialog.cpp \
 	qt/overviewpage.cpp qt/petresearchinstitute.cpp \
-	qt/petfeeddialog.cpp qt/howtoplaydialog.cpp \
-	qt/combatpowerdialog.cpp qt/petattrdialog.cpp \
-	qt/paymentrequestplus.cpp qt/paymentserver.cpp \
-	qt/receivecoinsdialog.cpp qt/receiverequestdialog.cpp \
-	qt/recentrequeststablemodel.cpp qt/sendcoinsdialog.cpp \
-	qt/sendcoinsentry.cpp qt/signverifymessagedialog.cpp \
-	qt/transactiondesc.cpp qt/transactiondescdialog.cpp \
-	qt/transactionfilterproxy.cpp qt/transactionrecord.cpp \
-	qt/transactiontablemodel.cpp qt/transactionview.cpp \
-	qt/walletframe.cpp qt/walletmodel.cpp \
+	qt/petplanetdlg.cpp qt/petfeeddialog.cpp \
+	qt/howtoplaydialog.cpp qt/combatpowerdialog.cpp \
+	qt/petattrdialog.cpp qt/paymentrequestplus.cpp \
+	qt/paymentserver.cpp qt/receivecoinsdialog.cpp \
+	qt/receiverequestdialog.cpp qt/recentrequeststablemodel.cpp \
+	qt/sendcoinsdialog.cpp qt/sendcoinsentry.cpp \
+	qt/signverifymessagedialog.cpp qt/transactiondesc.cpp \
+	qt/transactiondescdialog.cpp qt/transactionfilterproxy.cpp \
+	qt/transactionrecord.cpp qt/transactiontablemodel.cpp \
+	qt/transactionview.cpp qt/walletframe.cpp qt/walletmodel.cpp \
 	qt/walletmodeltransaction.cpp qt/walletview.cpp \
 	qt/addressbookpage.h qt/addresstablemodel.h \
 	qt/askpassphrasedialog.h qt/aliencoinaddressvalidator.h \
@@ -382,7 +383,7 @@ am__qt_libaliencoinqt_a_SOURCES_DIST =  \
 	qt/intro.h qt/macdockiconhandler.h qt/macnotificationhandler.h \
 	qt/networkstyle.h qt/notificator.h qt/openuridialog.h \
 	qt/optionsdialog.h qt/optionsmodel.h qt/overviewpage.h \
-	qt/petresearchinstitute.h qt/petfeeddialog.h \
+	qt/petresearchinstitute.h qt/petplanetdlg.h qt/petfeeddialog.h \
 	qt/howtoplaydialog.h qt/combatpowerdialog.h qt/petattrdialog.h \
 	qt/paymentrequestplus.h qt/paymentserver.h qt/peertablemodel.h \
 	qt/qvalidatedlineedit.h qt/qvaluecombobox.h \
@@ -400,9 +401,10 @@ am__qt_libaliencoinqt_a_SOURCES_DIST =  \
 	qt/forms/editaddressdialog.ui qt/forms/helpmessagedialog.ui \
 	qt/forms/intro.ui qt/forms/openuridialog.ui \
 	qt/forms/optionsdialog.ui qt/forms/overviewpage.ui \
-	qt/forms/petresearchinstitute.ui qt/forms/petfeeddialog.ui \
-	qt/forms/howtoplaydialog.ui qt/forms/combatpowerdialog.ui \
-	qt/forms/petattrdialog.ui qt/forms/receivecoinsdialog.ui \
+	qt/forms/petresearchinstitute.ui qt/forms/petplanetdlg.ui \
+	qt/forms/petfeeddialog.ui qt/forms/howtoplaydialog.ui \
+	qt/forms/combatpowerdialog.ui qt/forms/petattrdialog.ui \
+	qt/forms/receivecoinsdialog.ui \
 	qt/forms/receiverequestdialog.ui qt/forms/rpcconsole.ui \
 	qt/forms/sendcoinsdialog.ui qt/forms/sendcoinsentry.ui \
 	qt/forms/signverifymessagedialog.ui \
@@ -479,6 +481,7 @@ am__qt_libaliencoinqt_a_SOURCES_DIST =  \
 @ENABLE_QT_TRUE@@ENABLE_WALLET_TRUE@	qt/qt_libaliencoinqt_a-openuridialog.$(OBJEXT) \
 @ENABLE_QT_TRUE@@ENABLE_WALLET_TRUE@	qt/qt_libaliencoinqt_a-overviewpage.$(OBJEXT) \
 @ENABLE_QT_TRUE@@ENABLE_WALLET_TRUE@	qt/qt_libaliencoinqt_a-petresearchinstitute.$(OBJEXT) \
+@ENABLE_QT_TRUE@@ENABLE_WALLET_TRUE@	qt/qt_libaliencoinqt_a-petplanetdlg.$(OBJEXT) \
 @ENABLE_QT_TRUE@@ENABLE_WALLET_TRUE@	qt/qt_libaliencoinqt_a-petfeeddialog.$(OBJEXT) \
 @ENABLE_QT_TRUE@@ENABLE_WALLET_TRUE@	qt/qt_libaliencoinqt_a-howtoplaydialog.$(OBJEXT) \
 @ENABLE_QT_TRUE@@ENABLE_WALLET_TRUE@	qt/qt_libaliencoinqt_a-combatpowerdialog.$(OBJEXT) \
@@ -550,6 +553,7 @@ am__qt_libaliencoinqt_a_SOURCES_DIST =  \
 @ENABLE_QT_TRUE@	qt/qt_libaliencoinqt_a-moc_optionsmodel.$(OBJEXT) \
 @ENABLE_QT_TRUE@	qt/qt_libaliencoinqt_a-moc_overviewpage.$(OBJEXT) \
 @ENABLE_QT_TRUE@	qt/qt_libaliencoinqt_a-moc_petresearchinstitute.$(OBJEXT) \
+@ENABLE_QT_TRUE@	qt/qt_libaliencoinqt_a-moc_petplanetdlg.$(OBJEXT) \
 @ENABLE_QT_TRUE@	qt/qt_libaliencoinqt_a-moc_petfeeddialog.$(OBJEXT) \
 @ENABLE_QT_TRUE@	qt/qt_libaliencoinqt_a-moc_howtoplaydialog.$(OBJEXT) \
 @ENABLE_QT_TRUE@	qt/qt_libaliencoinqt_a-moc_combatpowerdialog.$(OBJEXT) \
@@ -1870,6 +1874,7 @@ EXTRA_DIST = leveldb $(am__append_16)
 @ENABLE_QT_TRUE@  qt/forms/optionsdialog.ui \
 @ENABLE_QT_TRUE@  qt/forms/overviewpage.ui \
 @ENABLE_QT_TRUE@  qt/forms/petresearchinstitute.ui \
+@ENABLE_QT_TRUE@  qt/forms/petplanetdlg.ui \
 @ENABLE_QT_TRUE@  qt/forms/petfeeddialog.ui \
 @ENABLE_QT_TRUE@  qt/forms/howtoplaydialog.ui \
 @ENABLE_QT_TRUE@  qt/forms/combatpowerdialog.ui \
@@ -1905,6 +1910,7 @@ EXTRA_DIST = leveldb $(am__append_16)
 @ENABLE_QT_TRUE@  qt/moc_optionsmodel.cpp \
 @ENABLE_QT_TRUE@  qt/moc_overviewpage.cpp \
 @ENABLE_QT_TRUE@  qt/moc_petresearchinstitute.cpp \
+@ENABLE_QT_TRUE@  qt/moc_petplanetdlg.cpp \
 @ENABLE_QT_TRUE@  qt/moc_petfeeddialog.cpp \
 @ENABLE_QT_TRUE@  qt/moc_howtoplaydialog.cpp \
 @ENABLE_QT_TRUE@  qt/moc_combatpowerdialog.cpp \
@@ -1942,6 +1948,7 @@ EXTRA_DIST = leveldb $(am__append_16)
 @ENABLE_QT_TRUE@  qt/intro.moc \
 @ENABLE_QT_TRUE@  qt/overviewpage.moc \
 @ENABLE_QT_TRUE@  qt/petresearchinstitute.moc \
+@ENABLE_QT_TRUE@  qt/petplanetdlg.moc \
 @ENABLE_QT_TRUE@  qt/petfeeddialog.moc \
 @ENABLE_QT_TRUE@  qt/howtoplaydialog.moc \
 @ENABLE_QT_TRUE@  qt/combatpowerdialog.moc \
@@ -1980,6 +1987,7 @@ EXTRA_DIST = leveldb $(am__append_16)
 @ENABLE_QT_TRUE@  qt/optionsmodel.h \
 @ENABLE_QT_TRUE@  qt/overviewpage.h \
 @ENABLE_QT_TRUE@  qt/petresearchinstitute.h \
+@ENABLE_QT_TRUE@  qt/petplanetdlg.h \
 @ENABLE_QT_TRUE@  qt/petfeeddialog.h \
 @ENABLE_QT_TRUE@  qt/howtoplaydialog.h \
 @ENABLE_QT_TRUE@  qt/combatpowerdialog.h \
@@ -2340,6 +2348,8 @@ qt/qt_libaliencoinqt_a-overviewpage.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
 qt/qt_libaliencoinqt_a-petresearchinstitute.$(OBJEXT):  \
 	qt/$(am__dirstamp) qt/$(DEPDIR)/$(am__dirstamp)
+qt/qt_libaliencoinqt_a-petplanetdlg.$(OBJEXT): qt/$(am__dirstamp) \
+	qt/$(DEPDIR)/$(am__dirstamp)
 qt/qt_libaliencoinqt_a-petfeeddialog.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
 qt/qt_libaliencoinqt_a-howtoplaydialog.$(OBJEXT): qt/$(am__dirstamp) \
@@ -2428,6 +2438,8 @@ qt/qt_libaliencoinqt_a-moc_overviewpage.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
 qt/qt_libaliencoinqt_a-moc_petresearchinstitute.$(OBJEXT):  \
 	qt/$(am__dirstamp) qt/$(DEPDIR)/$(am__dirstamp)
+qt/qt_libaliencoinqt_a-moc_petplanetdlg.$(OBJEXT): qt/$(am__dirstamp) \
+	qt/$(DEPDIR)/$(am__dirstamp)
 qt/qt_libaliencoinqt_a-moc_petfeeddialog.$(OBJEXT):  \
 	qt/$(am__dirstamp) qt/$(DEPDIR)/$(am__dirstamp)
 qt/qt_libaliencoinqt_a-moc_howtoplaydialog.$(OBJEXT):  \
@@ -2910,6 +2922,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libaliencoinqt_a-moc_peertablemodel.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libaliencoinqt_a-moc_petattrdialog.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libaliencoinqt_a-moc_petfeeddialog.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libaliencoinqt_a-moc_petplanetdlg.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libaliencoinqt_a-moc_petresearchinstitute.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libaliencoinqt_a-moc_qvalidatedlineedit.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libaliencoinqt_a-moc_qvaluecombobox.Po@am__quote@
@@ -2943,6 +2956,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libaliencoinqt_a-peertablemodel.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libaliencoinqt_a-petattrdialog.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libaliencoinqt_a-petfeeddialog.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libaliencoinqt_a-petplanetdlg.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libaliencoinqt_a-petresearchinstitute.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libaliencoinqt_a-qrc_aliencoin.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libaliencoinqt_a-qrc_aliencoin_locale.Po@am__quote@
@@ -4534,6 +4548,20 @@ qt/qt_libaliencoinqt_a-petresearchinstitute.obj: qt/petresearchinstitute.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libaliencoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libaliencoinqt_a-petresearchinstitute.obj `if test -f 'qt/petresearchinstitute.cpp'; then $(CYGPATH_W) 'qt/petresearchinstitute.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/petresearchinstitute.cpp'; fi`
 
+qt/qt_libaliencoinqt_a-petplanetdlg.o: qt/petplanetdlg.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libaliencoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libaliencoinqt_a-petplanetdlg.o -MD -MP -MF qt/$(DEPDIR)/qt_libaliencoinqt_a-petplanetdlg.Tpo -c -o qt/qt_libaliencoinqt_a-petplanetdlg.o `test -f 'qt/petplanetdlg.cpp' || echo '$(srcdir)/'`qt/petplanetdlg.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libaliencoinqt_a-petplanetdlg.Tpo qt/$(DEPDIR)/qt_libaliencoinqt_a-petplanetdlg.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='qt/petplanetdlg.cpp' object='qt/qt_libaliencoinqt_a-petplanetdlg.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libaliencoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libaliencoinqt_a-petplanetdlg.o `test -f 'qt/petplanetdlg.cpp' || echo '$(srcdir)/'`qt/petplanetdlg.cpp
+
+qt/qt_libaliencoinqt_a-petplanetdlg.obj: qt/petplanetdlg.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libaliencoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libaliencoinqt_a-petplanetdlg.obj -MD -MP -MF qt/$(DEPDIR)/qt_libaliencoinqt_a-petplanetdlg.Tpo -c -o qt/qt_libaliencoinqt_a-petplanetdlg.obj `if test -f 'qt/petplanetdlg.cpp'; then $(CYGPATH_W) 'qt/petplanetdlg.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/petplanetdlg.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libaliencoinqt_a-petplanetdlg.Tpo qt/$(DEPDIR)/qt_libaliencoinqt_a-petplanetdlg.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='qt/petplanetdlg.cpp' object='qt/qt_libaliencoinqt_a-petplanetdlg.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libaliencoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libaliencoinqt_a-petplanetdlg.obj `if test -f 'qt/petplanetdlg.cpp'; then $(CYGPATH_W) 'qt/petplanetdlg.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/petplanetdlg.cpp'; fi`
+
 qt/qt_libaliencoinqt_a-petfeeddialog.o: qt/petfeeddialog.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libaliencoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libaliencoinqt_a-petfeeddialog.o -MD -MP -MF qt/$(DEPDIR)/qt_libaliencoinqt_a-petfeeddialog.Tpo -c -o qt/qt_libaliencoinqt_a-petfeeddialog.o `test -f 'qt/petfeeddialog.cpp' || echo '$(srcdir)/'`qt/petfeeddialog.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libaliencoinqt_a-petfeeddialog.Tpo qt/$(DEPDIR)/qt_libaliencoinqt_a-petfeeddialog.Po
@@ -5149,6 +5177,20 @@ qt/qt_libaliencoinqt_a-moc_petresearchinstitute.obj: qt/moc_petresearchinstitute
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='qt/moc_petresearchinstitute.cpp' object='qt/qt_libaliencoinqt_a-moc_petresearchinstitute.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libaliencoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libaliencoinqt_a-moc_petresearchinstitute.obj `if test -f 'qt/moc_petresearchinstitute.cpp'; then $(CYGPATH_W) 'qt/moc_petresearchinstitute.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/moc_petresearchinstitute.cpp'; fi`
+
+qt/qt_libaliencoinqt_a-moc_petplanetdlg.o: qt/moc_petplanetdlg.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libaliencoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libaliencoinqt_a-moc_petplanetdlg.o -MD -MP -MF qt/$(DEPDIR)/qt_libaliencoinqt_a-moc_petplanetdlg.Tpo -c -o qt/qt_libaliencoinqt_a-moc_petplanetdlg.o `test -f 'qt/moc_petplanetdlg.cpp' || echo '$(srcdir)/'`qt/moc_petplanetdlg.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libaliencoinqt_a-moc_petplanetdlg.Tpo qt/$(DEPDIR)/qt_libaliencoinqt_a-moc_petplanetdlg.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='qt/moc_petplanetdlg.cpp' object='qt/qt_libaliencoinqt_a-moc_petplanetdlg.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libaliencoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libaliencoinqt_a-moc_petplanetdlg.o `test -f 'qt/moc_petplanetdlg.cpp' || echo '$(srcdir)/'`qt/moc_petplanetdlg.cpp
+
+qt/qt_libaliencoinqt_a-moc_petplanetdlg.obj: qt/moc_petplanetdlg.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libaliencoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libaliencoinqt_a-moc_petplanetdlg.obj -MD -MP -MF qt/$(DEPDIR)/qt_libaliencoinqt_a-moc_petplanetdlg.Tpo -c -o qt/qt_libaliencoinqt_a-moc_petplanetdlg.obj `if test -f 'qt/moc_petplanetdlg.cpp'; then $(CYGPATH_W) 'qt/moc_petplanetdlg.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/moc_petplanetdlg.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_libaliencoinqt_a-moc_petplanetdlg.Tpo qt/$(DEPDIR)/qt_libaliencoinqt_a-moc_petplanetdlg.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='qt/moc_petplanetdlg.cpp' object='qt/qt_libaliencoinqt_a-moc_petplanetdlg.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libaliencoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_libaliencoinqt_a-moc_petplanetdlg.obj `if test -f 'qt/moc_petplanetdlg.cpp'; then $(CYGPATH_W) 'qt/moc_petplanetdlg.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/moc_petplanetdlg.cpp'; fi`
 
 qt/qt_libaliencoinqt_a-moc_petfeeddialog.o: qt/moc_petfeeddialog.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_libaliencoinqt_a_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_libaliencoinqt_a-moc_petfeeddialog.o -MD -MP -MF qt/$(DEPDIR)/qt_libaliencoinqt_a-moc_petfeeddialog.Tpo -c -o qt/qt_libaliencoinqt_a-moc_petfeeddialog.o `test -f 'qt/moc_petfeeddialog.cpp' || echo '$(srcdir)/'`qt/moc_petfeeddialog.cpp

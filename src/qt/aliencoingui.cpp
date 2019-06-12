@@ -399,9 +399,13 @@ void AliencoinGUI::createActions(const NetworkStyle *networkStyle)
 	
     waiXingDunGuanWang = new QAction(QIcon(":/icons/globe"), tr("PetPlanet"), this);
     waiXingDunGuanWang->setStatusTip(tr("PetPlanet"));
-    //connect(waiXingDunGuanWang, &QAction::triggered, [&](){ QDesktopServices::openUrl(QUrl("http://www.waixingdun.com")); });
-    connect(waiXingDunGuanWang, &QAction::triggered,
-            [&](){ QMessageBox::information(NULL, tr("PetPlanet"), tr("The PetPlanet will open later!"), QMessageBox::Yes); });
+	waiXingDunGuanWang->setCheckable(true);
+	tabGroup->addAction(waiXingDunGuanWang);
+	connect(waiXingDunGuanWang , SIGNAL(triggered()), this, SLOT(gotoPetPlanetPage()));
+	/** new add for pet planet page */
+    //connect(waiXingDunGuanWang, &QAction::triggered, this,SLOT(gotoPetPlanetPage()));
+    //connect(waiXingDunGuanWang, &QAction::triggered,
+    //        [&](){ QMessageBox::information(NULL, tr("PetPlanet"), tr("The PetPlanet will open later!"), QMessageBox::Yes); });
 	
     sheQu = new QAction(QIcon(":/icons/irc_icon"), tr("API"), this);
     sheQu->setStatusTip(tr("API"));
@@ -702,6 +706,12 @@ void AliencoinGUI::gotoPetResearchInsPage()
 	quKuaiLiuLaQi->setChecked(true);
     if (walletFrame) walletFrame->gotoPetResearchIns();
 }
+void AliencoinGUI::gotoPetPlanetPage()
+{
+	waiXingDunGuanWang->setChecked(true);
+    if (walletFrame) walletFrame->gotoPetPlanetPage();
+}
+
 void AliencoinGUI::gotoHistoryPage()
 {
     historyAction->setChecked(true);

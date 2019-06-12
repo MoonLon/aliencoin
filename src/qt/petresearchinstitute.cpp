@@ -32,6 +32,42 @@ using namespace boost;
 using namespace boost::assign;
 using namespace json_spirit;
 
+int petBorn = 99;
+
+
+std::map<std::string, std::map<int, int>> petPropetyNumber{
+    {"liliang"  , {{99, 0}, {-1, 2000}, {0, 1500}, {1, 1000}, {2, 500}, {3, 100}} },
+    {"minjie"   , {{99, 0}, {-1, 2000}, {0, 1500}, {1, 1000}, {2, 500}, {3, 100}} },
+    {"zhili"    , {{99, 0}, {-1, 2000}, {0, 1500}, {1, 1000}, {2, 500}, {3, 100}} },
+    {"tongshuai", {{99, 0}, {-1, 200}, {0, 150}, {1, 100}, {2, 100}, {3, 100}} },
+    {"gedang"   , {{99, 0}, {-1, 20}, {0, 15}, {1, 10}, {2, 10}, {3, 10}} },
+    {"baoji"    , {{99, 0}, {-1, 20}, {0, 15}, {1, 10}, {2, 10}, {3, 10}} },
+    {"yidong"   , {{99, 0}, {-1, 5}, {0, 3}, {1, 2}, {2, 2}, {3, 2}} },
+    {"tiaoju"   , {{99, 0}, {-1, 5}, {0, 3}, {1, 2}, {2, 2}, {3, 2}} },
+    {"gongju"   , {{99, 0}, {-1, 5}, {0, 3}, {1, 2}, {2, 2}, {3, 2}} },
+    {"shunfa"   , {{99, 0}, {-1, 5}, {0, 3}, {1, 2}, {2, 2}, {3, 2}} },
+    {"keji"     , {{99, 0}, {-1, 10}, {0, 8}, {1, 5}, {2, 5}, {3, 5}} },
+    {"chaonengli", {{99, 0}, {-1, 10}, {0, 8}, {1, 5}, {2, 5}, {3, 5}} },
+    {"tuanzhan" , {{99, 0}, {-1, 15}, {0, 10}, {1, 5}, {2, 5}, {3, 5}} },
+    {"juejin"   , {{99, 0}, {-1, 20}, {0, 15}, {1, 10}, {2, 5}, {3, 1}} },
+    };
+std::map<std::string, int> petPropetyResult{
+		{"liliang"	, 0},
+		{"minjie"	, 0},
+		{"zhili"	, 0},
+		{"tongshuai", 0},
+		{"gedang"	, 0},
+		{"baoji"	, 0},
+		{"yidong"	, 0},
+		{"tiaoju"	, 0},
+		{"gongju"	, 0},
+		{"shunfa"	, 0},
+		{"keji" 	, 0},
+		{"chaonengli", 0},
+		{"tuanzhan" , 0},
+		{"juejin"	, 0},
+		};
+
 static QWidget* makePetFrameSpacer()
 {
     QWidget* spacer = new QWidget();
@@ -440,7 +476,7 @@ void PetResearchInstitute::setBalance(const CAmount& balance, const CAmount& unc
             petBorn = 2;
             this->leftPetWidget->setStyleSheet("QWidget { border-image:url(:/images/pet2);}");
             break;
-        case 100000:
+        case firstAmount:
             petBorn = 3;
             this->leftPetWidget->setStyleSheet("QWidget { border-image:url(:/images/pet3);}");
             break;
@@ -571,7 +607,7 @@ void PetResearchInstitute::setWalletModel(WalletModel *model)
 		
         setBalance(model->getBalance(), model->getUnconfirmedBalance(), model->getImmatureBalance(),
                    model->getWatchBalance(), model->getWatchUnconfirmedBalance(), model->getWatchImmatureBalance());
-        connect(model, SIGNAL(balanceChanged(CAmount,CAmount,CAmount,CAmount,CAmount,CAmount)), this, SLOT(setBalance(CAmount,CAmount,CAmount,CAmount,CAmount,CAmount)));
+ //       connect(model, SIGNAL(balanceChanged(CAmount,CAmount,CAmount,CAmount,CAmount,CAmount)), this, SLOT(setBalance(CAmount,CAmount,CAmount,CAmount,CAmount,CAmount)));
 
         //connect(model->getOptionsModel(), SIGNAL(displayUnitChanged(int)), this, SLOT(updateDisplayUnit()));
 

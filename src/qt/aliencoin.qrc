@@ -45,21 +45,21 @@
         <file alias="filesave">res/icons/filesave.png</file>
         <file alias="qrcode">res/icons/qrcode.png</file>
         <file alias="debugwindow">res/icons/debugwindow.png</file>
-		<file alias="facebook">res/icons/facebook.png</file>
-		<file alias="globe">res/icons/globe.png</file>
-		<file alias="link">res/icons/link.png</file>
-		<file alias="twitter">res/icons/twitter.png</file>
-		<file alias="irc_icon">res/icons/irc_icon.png</file>
+        <file alias="facebook">res/icons/facebook.png</file>
+        <file alias="globe">res/icons/globe.png</file>
+        <file alias="link">res/icons/link.png</file>
+        <file alias="twitter">res/icons/twitter.png</file>
+        <file alias="irc_icon">res/icons/irc_icon.png</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>
-		<file alias="header">res/images/header.png</file>
-		<file alias="header1">res/images/header1.png</file>
+        <file alias="header">res/images/header.png</file>
+        <file alias="header1">res/images/header1.png</file>
         <file alias="splash">res/images/splash.png</file>
         <file alias="splash_testnet">res/images/splash_testnet.png</file>
-		<file alias="splash2">res/images/splash2.jpg</file>
-		<file alias="splash3">res/images/splash3.png</file>
-		<file alias="walletpic">res/images/walletpic.png</file>
+        <file alias="splash2">res/images/splash2.jpg</file>
+        <file alias="splash3">res/images/splash3.png</file>
+        <file alias="walletpic">res/images/walletpic.png</file>
         <file alias="attrbk">res/images/petAttrBKImage.png</file>
         <file alias="labbk">res/images/petLabAttrBK.png</file>
         <file alias="btnsel">res/images/petbtnsel.png</file>
@@ -74,19 +74,27 @@
         <file alias="pet1">res/images/pet1.png</file>
         <file alias="pet2">res/images/pet2.png</file>
         <file alias="pet3">res/images/pet3.png</file>
-	
- 	<file alias="getpetdefault">res/images/getpetdefault.png</file>
+        <file alias="getpetdefault">res/images/getpetdefault.png</file>
         <file alias="getpethover">res/images/getpethover.png</file>
-	<file alias="getpetchecked">res/images/getpetchecked.png</file>
+        <file alias="getpetchecked">res/images/getpetchecked.png</file>
         <file alias="getpetpressed">res/images/getpetpressed.png</file>
-	
-	<file alias="feeddefault">res/images/feeddefault.png</file>
+        <file alias="feeddefault">res/images/feeddefault.png</file>
         <file alias="feedhover">res/images/feedhover.png</file>
-	<file alias="feedchecked">res/images/feedchecked.png</file>
+        <file alias="feedchecked">res/images/feedchecked.png</file>
         <file alias="feedpressed">res/images/feedpressed.png</file>
-	
+        <file alias="plantbk">res/images/petplanetbkimage.png</file>
+        <file alias="plantwm">res/images/plantwm.png</file>
+        <file alias="planetupdate">res/images/planetupdate.png</file>
+        <file alias="planetlvl0">res/images/planetlvl_0.png</file>
+        <file alias="planettxtbk">res/images/planettxtbk.png</file>
+        <file alias="labplanet">res/images/labplanet.png</file>
+        <file alias="buyplanet">res/images/btnbuyplanet.png</file>
+        <file alias="standplanet">res/images/standplanet.png</file>
+        <file alias="supperplanet">res/images/supperplanet.png</file>
+        <file alias="topplanet">res/images/topplanet.png</file>
+        <file alias="planetlvl1">res/images/planetlvl_1.png</file>
+        <file alias="planetlvl2">res/images/planetlvl_2.png</file>
     </qresource>
-
     <qresource prefix="/movies">
         <file alias="spinner-000">res/movies/spinner-000.png</file>
         <file alias="spinner-001">res/movies/spinner-001.png</file>

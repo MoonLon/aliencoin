@@ -52,7 +52,8 @@ public slots:
     void gotoOverviewPage();
 	/** new add for pet view */
 	void gotoPetResearchIns();
-	
+	/** new add for pet planet page */
+	void gotoPetPlanetPage();
     /** Switch to history (transactions) page */
     void gotoHistoryPage();
     /** Switch to receive coins page */
